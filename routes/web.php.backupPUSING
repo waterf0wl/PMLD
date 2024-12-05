@@ -1,0 +1,93 @@
+<?php
+
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AttackerController;
+use App\Http\Controllers\DefenderController;
+use App\Http\Controllers\SandboxController;
+use App\Http\Controllers\TerminalController;
+use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+
+Route::middleware('auth')->group(function () {
+    // Profile Routes
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Rute untuk administrator
+//    Route::middleware(role:'administrator')
+    Route::middleware('auth'['administrator'])->group(function () {
+        Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+        Route::get('/admin/users', [AdminController::class, 'index'])->name('admin.users.index');
+        Route::get('/admin/users/{user}/edit', [AdminController::class, 'edit'])->name('admin.users.edit');
+        Route::put('/admin/users/{user}', [AdminController::class, 'update'])->name('admin.users.update');
+        Route::delete('/admin/users/{user}', [AdminController::class, 'destroy'])->name('admin.users.destroy');
+        Route::get('/attacker', function () {
+            return view('attacker');
+        })->name('attacker');
+        //Route::get('/attacker', [AttackerController::class, 'index'])->name('attacker');
+        Route::get('/defender', function () {
+            return view('defender');
+        })->name('defender');
+        Route::get('/sandbox', [SandboxController::class, 'index'])->name('sandbox');
+        Route::get('/profile', [ProfileController::class, 'index'])->name('profile.edit');
+    });
+
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth', 'verified'])->name('dashboard');
+
+    //Route::get('/sandbox', function () {
+    //    return view('sandbox');
+    //})->middleware(['auth', 'verified'])->name('sandbox');
+
+    Route::get('/terminal', function () {
+        return view('terminal');
+    })->name('terminal'); 
+    
+    route::get('/home',function () {
+        return view('home');
+    })->name('home');
+
+    // Rute untuk attacker
+    Route::middleware(['role:attacker'])->group(function () {
+        Route::get('/attacker', function () {
+            return view('attacker');
+        })->name('attacker');
+        //Route::get('/defender', function () {
+        //    return abort(403, 'Unauthorized');
+        //})->name('defender');
+        Route::get('/attacker/dashboard', [AttackerController::class, 'dashboard'])->name('attacker.dashboard');
+
+    });
+
+    // Rute untuk defender
+    Route::middleware(['role:defender'])->group(function () {
+        Route::get('/defender', function () {
+            return view('defender');
+        })->name('defender');
+        Route::get('/attacker', function () {
+            return abort(403, 'Unauthorized');
+        })->name('attacker');
+        Route::get('/defender/dashboard', [DefenderController::class, 'dashboard'])->name('defender.dashboard');
+    });
+
+    // Route untuk Terminal
+    //Route::get('/terminal', function () {
+    //        return view('terminal');
+    //    })->middleware('auth')->name('terminal');
+
+    // Rute untuk semua peran
+
+});
+
+
+
+
+require __DIR__.'/auth.php';

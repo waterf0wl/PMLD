@@ -1,0 +1,136 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f5ff;
+    font-family: "Roboto", sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Page Header */
+.login-page-header {
+    background-color: #2e3b72; /* Dark blue background */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.login-page-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* Login form container */
+.login-form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #333;
+}
+
+.login-form-container p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #444;
+}
+
+.login-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-container label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-form-container input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-form-container img {
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.remember-me-forgot-password {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.remember-me-forgot-password a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.remember-me-forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Login Button */
+.login-form-container button,
+.x-primary-button {
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form-container button:hover,
+.x-primary-button:hover {
+    background-color: #001f4d;
+}
+
+/* Create Account Link */
+.create-account {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.create-account a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}

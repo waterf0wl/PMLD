@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header
+      class="bg-blue-800 text-white p-4 flex justify-between items-center"
+    >
+      <div class="flex items-center gap-2">
+        <img src="assets/logo.png" alt="Logo" class="h-12 w-12" />
+        <h1 class="text-xl font-bold">SYPENTEST</h1>
+      </div>
+      <div
+        class="relative user-info flex items-center bg-blue-800 px-4 py-2 rounded-full cursor-pointer"
+      >
+        <img src="assets/userlogo.png" alt="User Logo" class="h-6 mr-2" />
+        <span class="text-sm">Nabilla Cantika Violina</span>
+      </div>
+    </header>
+
+    <!-- Profile Form -->
+    <main class="max-w-3xl mx-auto mt-10 p-6 space-y-8">
+      <!-- Profile Information Section -->
+      <section class="bg-[#CAF0F8] p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold text-black mb-4">Profile Information</h2>
+        <p class="text-black mb-6">
+          Update your account's profile information and email address.
+        </p>
+        <form class="space-y-4">
+          <div>
+            <label for="username" class="block text-sm font-medium text-black"
+              >Username</label
+            >
+            <input
+              type="text"
+              id="username"
+              name="username"
+              class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-black"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-900 text-white px-4 py-2 rounded-md hover:bg-blue-800"
+          >
+            Save
+          </button>
+        </form>
+      </section>
+
+      <!-- Update Password Section -->
+      <section class="bg-[#CAF0F8] p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold text-black mb-4">Update Password</h2>
+        <p class="text-black mb-6">
+          Ensure your account is using a long, random password to stay secure.
+        </p>
+        <form class="space-y-4">
+          <div>
+            <label
+              for="current-password"
+              class="block text-sm font-medium text-black"
+              >Current Password</label
+            >
+            <input
+              type="password"
+              id="current-password"
+              name="current-password"
+              class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+          <div>
+            <label
+              for="new-password"
+              class="block text-sm font-medium text-black"
+              >New Password</label
+            >
+            <input
+              type="password"
+              id="new-password"
+              name="new-password"
+              class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+          <div>
+            <label
+              for="confirm-password"
+              class="block text-sm font-medium text-black"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-900 text-white px-4 py-2 rounded-md hover:bg-blue-800"
+          >
+            Save
+          </button>
+        </form>
+      </section>
+
+      <!-- Delete Account Section -->
+      <section class="bg-[#CAF0F8] p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold text-black mb-4">Delete Account</h2>
+        <p class="text-black mb-6">
+          Once your account is deleted, all of its resources and data will be
+          permanently deleted. Before deleting your account, please download any
+          data or information that you wish to retain.
+        </p>
+        <button
+          class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-500"
+        >
+          Delete Account
+        </button>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white mt-12 p-6">
+      <div class="flex justify-center items-center space-x-8">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <img src="assets/aset4.png" alt="Footer Logo" class="h-28" />
+        </div>
+        <!-- Informasi -->
+        <div class="text-left">
+          <h3 class="text-xl font-bold mb-1">System Penetration Testing</h3>
+          <p class="text-sm mb-4">Teknologi Rekayasa Internet</p>
+          <div class="space-y-2">
+            <!-- Email -->
+            <div class="flex items-center gap-2">
+              <img
+                src="assets/email-icon.png"
+                alt="Email Icon"
+                class="h-5 w-5"
+              />
+              <p>sypentest@gmail.com</p>
+            </div>
+            <!-- Lokasi -->
+            <div class="flex items-center gap-2">
+              <img
+                src="assets/location-icon.png"
+                alt="Location Icon"
+                class="h-5 w-5"
+              />
+              <p>Kampus 1 Jl. Yacaranda Sekip Unit IV Yogyakarta 55281</p>
+            </div>
+            <!-- Telepon -->
+            <div class="flex items-center gap-2">
+              <img
+                src="assets/phone-icon.png"
+                alt="Phone Icon"
+                class="h-5 w-5"
+              />
+              <p>0851-5536-0234</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-6 text-center text-sm">
+        &copy; 2024 Sypentest. All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>

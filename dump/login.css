@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #f2f5ff;
+    font-family: "Roboto", sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Video background */
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .video-background .background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Login form container */
+  .login-form-container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 100px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .login-form-container p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .login-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form-container label {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .login-form-container input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .remember-me-forgot-password {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+  
+  .remember-me-forgot-password a {
+    color: red;
+    text-decoration: none;
+  }
+  
+  .remember-me-forgot-password a:hover {
+    text-decoration: underline;
+  }
+  
+  .login-form-container button {
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form-container button:hover {
+    background-color: #001f4d;
+  }
+  
+  .create-account {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .create-account a {
+    color: red;
+    text-decoration: none;
+  }
+  
+  .create-account a:hover {
+    text-decoration: underline;
+  }
+  
